@@ -4,18 +4,14 @@
 
 
 ## Abstract
-In federated learning, data heterogeneity results from the non-independent and non-identically distributed nature of data.
-Contrast federated learning algorithms correct the local training of clients through the difference between model representations to alleviate data heterogeneity.
-When updating the local model, they take the global model as a positive sample and the previous round of local models as a negative sample.
-This strategy of selecting positive and negative samples is somewhat arbitrary, and the comparison of historical local models has not been fully utilized.
-In this paper, we propose a SWIM: Sliding-Window Model Contrast method, which improves the effectiveness of federated contrastive learning by introducing more rounds of local models.
-On the one hand, we design a sliding window mechanism for collecting client representations of historical local models.
-Subsequently, we employ the cosine distance function as a discriminator to distinguish them into positive and negative samples.
-On the other hand, we introduce a dynamic coefficient that balances the federal classification learning and feature learning tasks.
-By adjusting the dynamic coefficient at different training rounds, the global model becomes more focused on feature learning in the early stages and classification learning in the later stages.
-Experiments are compared with four state-of-the-art federated learning algorithms on three datasets.
-Results show the proposed algorithm is superior in terms of four algorithms.
-[[paper]](). 
+In federated learning, data heterogeneity leads to significant differences in the local models learned by the clients, thereby affecting the performance of the global model. 
+To address this issue, contrast federated learning algorithms increase the comparison of positive and negative samples on the clients, bringing the
+local models closer to the global model. 
+However, existing methods take the global model as the positive sample and the previous round of local models as the negative sample, resulting in insufficient utilization of historical local models. In this paper, we propose SWIM: Sliding-WIndow Model contrast method, which introduces more rounds of local models. 
+First, we design and utilize a sliding window mechanism for collecting client representations of historical local models. Subsequently, we employ the cosine distance function as a discriminator to distinguish them into positive and negative samples. In addition, we introduce a dynamic coefficient that balances the federated classification learning and feature learning tasks. 
+By adjusting the dynamic coefficient at different training rounds, the global model becomes more focused on feature learning in the early stages and classification learning in the later stages. 
+Experiments are compared with four stateof-the-art federated learning algorithms on three datasets. The results show that the proposed algorithm outperforms the four state-of-the-art algorithms in terms of accuracy.
+[[paper]](https://www.sciencedirect.com/science/article/pii/S0167739X24005545?dgcid=author). 
 
 ## Citation
 
